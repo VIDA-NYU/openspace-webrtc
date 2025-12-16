@@ -15,7 +15,7 @@ OpenSpace WebRTC consists of four main components:
 | Streaming Frontend Server (SF Server) | Serves Web GUI to clients, handles session requests |
 | Client Browser | Displays streamed OpenSpace session, sends user interactions to rendering server |
 
-*(Include component diagram image here if available)*
+![OpenSpace WebRTC Architecture Overview](images/openspace_webrtc-architecture_unsecure.png)
 
 ---
 
@@ -33,10 +33,6 @@ Communication between the SB Server and rendering servers uses JSON messages. Al
 | `{ "command": "SERVER_STATUS" }` | Requests general status of the rendering server | Example return message:<br>`{ "command": "SERVER_STATUS", "error": "none", "id": 0, "running": 1, "total": 3 }`<br>In this example, there is currently 1 running instance, out of a possible 3 instances that the server can simultaneously support. |
 
 ---
-
-## Session Initialization Sequence
-
-The table below describes the typical sequence of events when a user starts an OpenSpace WebRTC session.
 
 ## Session Initialization Sequence
 
@@ -120,7 +116,7 @@ Storing server IP addresses, port numbers, and instance IDs in the client browse
 | `wss://openspaceweb.com/4682` | `localhost:8080/4682` → `ws://openspaceweb.com:4682` | OpenSpace instance API websocket |
 | `wss://openspaceweb.com/8443` | `localhost:8080/8443` → `ws://openspaceweb.com:8443` | Signaling server |
 
-*Include “modified secure architecture” image here.*
+![OpenSpace WebRTC Architecture Overview](images/openspace_webrtc-architecture_secure.png)
 
 ---
 
@@ -133,6 +129,6 @@ Storing server IP addresses, port numbers, and instance IDs in the client browse
 | `ws://openspaceweb.com/4682` | OpenSpace instance API websocket |
 | `ws://openspaceweb.com:8443` | Signaling server |
 
-*Include “original architecture” image here.*
+![OpenSpace WebRTC Architecture Overview](images/openspace_webrtc-architecture_unsecure.png)
 
 **Note:** Storing server IP addresses, port numbers, and instance IDs in the client browser’s `localStorage` poses a security risk. This should be mitigated in future security improvements.
