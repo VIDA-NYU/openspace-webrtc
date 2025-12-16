@@ -28,6 +28,7 @@ This document provides guidance for selecting AWS EC2 instances to run OpenSpace
 | G5.2xlarge | NVIDIA A10G (24GB) | 8 | 32 GB | 24 GB | 5-6 | ~$2.40 | Best for production |
 
 **Legend:**
+
 - **MVP**: Minimal Viable Product (2 developers, limited instances).  
 - **G3**: Older GPU generation for graphics-heavy tasks.  
 - **G4**: NVIDIA T4 GPUs, balanced performance.  

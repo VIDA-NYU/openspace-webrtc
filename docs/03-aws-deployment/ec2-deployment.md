@@ -21,11 +21,14 @@ OpenSpace WebRTC requires a Windows environment. You can connect to your EC2 ins
 1. Log in to the AWS EC2 Console as the root user.
 2. Navigate to EC2 Dashboard → Select your Windows instance.
 3. Retrieve the Administrator password:
+
    - Instance state → Start instance → Connect → RDP Client tab → Get Password
    - Upload `.pem` key to decrypt and get the password
+
 4. Open Remote Desktop Connection (`Win + R` → `mstsc`).
 5. Enter the public IP/DNS of your EC2 instance → Connect.
 6. Login:
+
    - **Username:** Administrator  
    - **Password:** Use the decrypted password  
    - Accept certificate warning if prompted.
@@ -34,9 +37,12 @@ OpenSpace WebRTC requires a Windows environment. You can connect to your EC2 ins
 1. Install Microsoft Remote Desktop: [Mac App Store](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466)
 2. Retrieve EC2 Administrator password as above.
 3. Add a new PC in the Remote Desktop app:
+
    - Click `+` → Add PC → Enter public IP/DNS
    - Use "Administrator" and the decrypted password
+
 4. Connect:
+
    - Double-click the PC entry
    - Accept certificate if prompted
 
@@ -50,6 +56,7 @@ Windows uses RPC to allow different programs to communicate, including over the 
 1. Press `WIN + R` → `services.msc`
 2. Locate `Remote Procedure Call (RPC)`
 3. Ensure:
+
    - Status: Running
    - Startup Type: Automatic
 

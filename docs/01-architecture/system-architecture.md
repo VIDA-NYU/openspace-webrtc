@@ -37,6 +37,7 @@ Communication between the SB Server and rendering servers uses JSON messages. Al
 ## Session Initialization Sequence
 
 **Starting a Rendering Server:** A rendering server is intended to run continuously in order to provide access whenever requested. To start a server for the first time, run the python supervisor. This will do the following:
+
 - Start a signaling server which will handle all sessions between any of the running OpenSpace instances on its own server and their corresponding client.
 - Start a WebGUI frontend served by node.js. Any of the clients connecting to OpenSpace instances will connect to this at port 4690 in order to obtain their copy of the WebGUI to run on their browser.
 - Establish a websocket connection on port 8765 to listen for commands from the Streaming Backend Server (SB Server). The supervisor does not initiate any communications; it only responds to commands from the SB Server.
@@ -62,8 +63,7 @@ The table below describes the typical sequence of events when a user starts an O
 |  |  |  | OpenSpace instance completes initialization |
 |  |  | STATUS 0 polling receives `RUNNING` status |  |
 |  |  | Sends "running" message to SF Server \| including session URL |  |
-|  | Receives “running” message with session URL:<br>`openspaceweb.sci.utah.edu:`<br>`4690/frontend/#/streaming?id=0` Where the URL parameter `id` contains the OpenSpace session ID
- |  |  |
+|  | Receives “running” message with session URL:<br>`openspaceweb.sci.utah.edu:`<br>`4690/frontend/#/streaming?id=0` Where the URL parameter `id` contains the OpenSpace session ID |  |  |
 |  | Switches from "waiting" message to browser frame using new URL |  |  |
 | Browser gets the Web GUI from rendering server using the new URL |  |  |  |
 | Establishes an API websocket connection with OpenSpace 0 (port = 4682 + ID) |  |  |  |

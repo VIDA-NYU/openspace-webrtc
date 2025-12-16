@@ -11,12 +11,14 @@ choose the most appropriate option for your needs.
 ## Local Single-Machine Deployment
 
 **Best for:**
+
 - Development
 - Testing
 - Demos
 - Running OpenSpace and the web browser on the same machine
 
 **Characteristics:**
+
 - Single host
 - No cloud infrastructure required
 - Simplest setup and lowest operational overhead
@@ -28,11 +30,13 @@ choose the most appropriate option for your needs.
 ## Cloud Deployment (AWS EC2)
 
 **Best for:**
+
 - Public or remote access
 - Multiple concurrent users
 - GPU-backed rendering on remote hardware
 
 **Characteristics:**
+
 - GPU-enabled EC2 instances
 - Additional network, security, and cost considerations
 - Supports multiple OpenSpace instances per server

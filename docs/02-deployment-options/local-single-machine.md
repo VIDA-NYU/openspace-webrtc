@@ -2,16 +2,20 @@
 This deployment runs **all OpenSpace WebRTC components on the same machine**
 in **non-secure mode (HTTP / WS)**.
 It is intended for:
+
 - Development
 - Testing
 - Demos
 - Running OpenSpace and the browser on the same machine
+
 Secure mode (HTTPS / WSS) is **not used in local deployments** and is only
 required when accessing OpenSpace WebRTC from **another network**, such as
 in an AWS EC2 deployment.
+
 ---
 ## Required Repositories
 You must clone and set up the following repositories locally:
+
 - OpenSpace Web Backend  
   https://github.com/OpenSpace/OpenSpace-Web-Backend
 - Backend WebRTC Server  
@@ -24,10 +28,12 @@ Refer to each repository for detailed build instructions and dependencies.
 ---
 ## Overview (Local, Non-Secure)
 In a local single-machine setup:
+
 - All components run on the same host
 - Communication uses **HTTP and WebSocket (WS)**
 - No TLS, reverse proxy, or certificates are required
 - OpenSpace instances are typically started **from the web UI**
+
 ---
 ## Step 1: Disable Secure WebSocket in the Frontend
 Local deployment **requires disabling secure WebSockets**.
@@ -43,8 +49,10 @@ export default openspaceApi(Environment.wsAddress, Environment.wsPort, false);
 This must be done before starting any services.
 ## Step 2: Run the Supervisor
 The supervisor automatically starts:
+
 - Web GUI on port 4690
 - Signaling server on port 8443
+
 ```bash
 # Navigate to your OpenSpace-Web-Backend directory
 cd /OpenSpace-Web-Backend
@@ -64,18 +72,24 @@ npm start
 ```
 Once started, the UI will load in the browser.
 ## Step 5: Start an OpenSpace Instance via the UI (Recommended)
+
 1. Open the browser on the same machine
+
 2. Navigate to:
 ```bash
 http://localhost:4690/frontend/
 ```
+
 3. Click "Join instance"
-This will:
-- Request a new OpenSpace instance
-- Start OpenSpace via the supervisor
-- Automatically connect the Web GUI
-- Begin streaming when initialization completes
+  This will:
+
+  - Request a new OpenSpace instance
+  - Start OpenSpace via the supervisor
+  - Automatically connect the Web GUI
+  - Begin streaming when initialization completes
+
 This is the normal and recommended workflow for local deployment.
+
 ## Optional: Start OpenSpace Manually (Advanced / Debugging)
 If needed, an OpenSpace instance can be started manually:
 ```bash

@@ -49,6 +49,7 @@ act as lightweight interaction endpoints.
 
 OpenSpace WebRTC is designed for scenarios where users access OpenSpace
 through a web interface (e.g., `web.openspaceproject.com`), such as:
+
 - Public or institutional web portals
 - Remote demonstrations and teaching
 - Cloud-hosted OpenSpace deployments
@@ -77,6 +78,7 @@ OpenSpace WebRTC emphasizes:
 ## What This Repository Provides
 
 This repository serves as:
+
 - A system-level introduction to OpenSpace WebRTC
 - A guide to deployment models (local and cloud-based)
 - A reference for architectural decisions and trade-offs
