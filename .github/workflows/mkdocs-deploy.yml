@@ -1,0 +1,36 @@
+# File: .github/workflows/mkdocs-deploy.yml
+name: Deploy MkDocs Site
+
+on:
+  push:
+    branches:
+      - main  # Run this workflow on every push to main
+
+permissions:
+  contents: write  # Needed so GitHub Actions can push to gh-pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repo
+      - uses: actions/checkout@v4
+
+      # 2. Configure Git so Actions can push
+      - name: Configure Git
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      # 3. Set up Python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # 4. Install dependencies
+      - run: pip install mkdocs mkdocs-material
+
+      # 5. Deploy the site automatically
+      - run: mkdocs gh-deploy --force
+
