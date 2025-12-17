@@ -278,6 +278,11 @@ npm start
 
 3. Run proxy & Caddy servers:
 
+      > ⚠️ **Important**
+      >  
+      > Caddy must be installed on the Windows machine **before** running the commands below.  
+      > After installing Caddy, copy the `Caddyfile` from  `\webrtc\OpenSpace-Web-Backend\secure_deployment\Caddyfile` to `C:\Caddy\`.
+
          cd /c/webrtc/OpenSpace-Web-Backend/secure_deployment/
          python proxy.py
 
