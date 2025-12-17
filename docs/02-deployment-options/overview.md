@@ -23,7 +23,7 @@ choose the most appropriate option for your needs.
 - No cloud infrastructure required
 - Simplest setup and lowest operational overhead
 
-→ See `local-single-machine.md`
+→ See [`local-single-machine.md`](local-single-machine.md)
 
 ---
 
@@ -42,4 +42,4 @@ choose the most appropriate option for your needs.
 - Supports multiple OpenSpace instances per server
 - Known limitations related to WebRTC video streaming in some setups
 
-→ See `cloud-aws-ec2.md`
+→ See [`cloud-aws-ec2.md`](cloud-aws-ec2.md)

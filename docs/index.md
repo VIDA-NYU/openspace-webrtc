@@ -15,47 +15,47 @@ high-performance rendering of large-scale space datasets.
 OpenSpace WebRTC allows OpenSpace to run on a rendering machine
 (local or cloud-based) while streaming the rendered frames to
 remote clients through a web browser.
-
 This enables:
 
 - Thin-client access (browser only)
 - Remote and cloud-based deployments
 - Scalable, multi-user scenarios
 
-## Deployment Options
+## Where to Get Started?
+
+If you are new to OpenSpace WebRTC, follow the path that best matches your goal:
+
+### Deployment Options
 OpenSpace WebRTC can be deployed in multiple ways:
 
 - **Local (Single Machine)**  
   OpenSpace and the WebRTC stack run on the same computer and are
   accessed via a web browser (local or LAN).  
-  [See Local Deployment Instructions](02-deployment-options/local-single-machine.md)
+  👉 [See Local Deployment Instructions](02-deployment-options/local-single-machine.md)
 
 - **Cloud (AWS EC2)**  
   OpenSpace runs on a GPU-enabled EC2 instance and streams to
   remote browsers over the internet.  
-  [See AWS Deployment Overview](03-aws-deployment/overview.md)  
+  👉  [See AWS Deployment Overview](03-aws-deployment/overview.md)  
 
-  Key AWS Docs:  
-  - [Cost & Scaling](03-aws-deployment/cost-and-scaling.md)  
-  - [Instance Requirements](03-aws-deployment/instance-requirements.md)  
-  - [Full EC2 Deployment Tutorial](03-aws-deployment/ec2-deployment.md)  
+    Key AWS Docs:  
+    - [Cost & Scaling](03-aws-deployment/cost-and-scaling.md)  
+    - [Instance Requirements](03-aws-deployment/instance-requirements.md)  
+    - [Full EC2 Deployment Tutorial](03-aws-deployment/ec2-deployment.md)  
 
-## System Architecture
+### System Architecture
 Learn about OpenSpace WebRTC architecture and communication flow:  
-[System Architecture](01-architecture/system-architecture.md)  
+👉  [System Architecture](01-architecture/system-architecture.md)  
 ![Architecture Diagram](01-architecture/images/openspace_webrtc-architecture_unsecure.png)  
 
-## Related Repositories
+### Related Repositories
 
 This repository does **not** duplicate the implementation or build
 instructions of the OpenSpace WebRTC components. Instead, it
 provides system-level documentation and deployment guidance.
 
-Core components:
-- [OpenSpace-Web-Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend)
-- [Backend-WebRTC](https://github.com/OpenSpace/Backend-WebRTC)
-- [UI-WebRTC](https://github.com/OpenSpace/UI-WebRTC)
+👉  [See Core components](00-introduction/related-repositories.md)  
 
-## Appendix
+### Appendix
 Reference material, external links, and additional resources:  
-[Appendix](docs/appendix)
+[Appendix](appendix)

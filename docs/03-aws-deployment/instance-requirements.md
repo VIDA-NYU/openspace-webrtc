@@ -44,3 +44,5 @@ This document summarizes the hardware and software requirements to run OpenSpace
 For pricing and instance specifications, see [AWS EC2 On-Demand Pricing](https://aws.amazon.com/ec2/pricing/on-demand/).
 
 > Recommended for MVP: **G4dn.xlarge**. Upgrade to **G5.xlarge** or **G5.2xlarge** for scaling and production deployment.
+
+For guidance on EC2 instance types, GPU options, and cost considerations, see [`cost-and-scaling.md`](cost-and-scaling.md).

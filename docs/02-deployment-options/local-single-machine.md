@@ -16,12 +16,9 @@ in an AWS EC2 deployment.
 ## Required Repositories
 You must clone and set up the following repositories locally:
 
-- OpenSpace Web Backend  
-  https://github.com/OpenSpace/OpenSpace-Web-Backend
-- Backend WebRTC Server  
-  https://github.com/OpenSpace/Backend-WebRTC
-- UI WebRTC (Frontend)  
-  https://github.com/OpenSpace/UI-WebRTC
+- [OpenSpace Web Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend)
+- [Backend WebRTC Server](https://github.com/OpenSpace/Backend-WebRTC)
+- [UI-WebRTC](https://github.com/OpenSpace/UI-WebRTC)
 
 Refer to each repository for detailed build instructions and dependencies.
 
@@ -76,17 +73,19 @@ Once started, the UI will load in the browser.
 1. Open the browser on the same machine
 
 2. Navigate to:
-```bash
-http://localhost:4690/frontend/
-```
+
+    ```bash
+    http://localhost:4690/frontend/
+    ```
 
 3. Click "Join instance"
-  This will:
+  
+    This will:
 
-  - Request a new OpenSpace instance
-  - Start OpenSpace via the supervisor
-  - Automatically connect the Web GUI
-  - Begin streaming when initialization completes
+    - Request a new OpenSpace instance
+    - Start OpenSpace via the supervisor
+    - Automatically connect the Web GUI
+    - Begin streaming when initialization completes
 
 This is the normal and recommended workflow for local deployment.
 
@@ -105,9 +104,14 @@ To access the local deployment from a different machine:
 ```bash
 http://<ip_address>:4690/frontend/#/streaming?id=0
 ```
-⚠️ The IP address must be added to chrome://flags to allow non-secure
-content.
+⚠️ Important: This configuration must be done on the client side. In `chrome://flags`, allow non-secure content for the server’s IP address (not the client IP).
 This approach is intended for testing only.
+
+## Demo Video
+This demo shows the OpenSpace instance running on the EC2 Windows server and accessed locally within the same machine.  
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/lCfv9l-rLxg?start=126&end=304" title="Non-secure OpenSpace WebRTC demo" frameborder="0" allowfullscreen></iframe>
+
 ## Important Notes
 - Local deployment runs entirely in non-secure mode
 - No authentication or encryption is provided
@@ -115,4 +119,4 @@ This approach is intended for testing only.
 - Secure access is addressed in cloud deployments only
 
 For secure, cross-network access, see:
-→ cloud-aws-ec2.md
+→ [`cloud-aws-ec2.md`](cloud-aws-ec2.md)
