@@ -305,13 +305,15 @@ npm start
          export default openspaceApi(Environment.wsAddress, Environment.wsPort, false);
       <!-- ``` -->
 
-2. Start instance:
+2. Enable unsecure section in `.env`at `/UI-WebRTC/.env`. Uncomment the unsecure section, and comment the secure section.
+
+3. Start instance:
 
          cd /c/webrtc/OpenSpace-Web-Backend/testing
          python start.py
       <!-- ``` -->
 
-3. Access via browser:
+4. Access via browser:
 
       - Local: `http://localhost:4690/frontend/#/streaming?id=0`
 

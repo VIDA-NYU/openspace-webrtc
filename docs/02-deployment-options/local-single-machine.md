@@ -62,12 +62,24 @@ cd /Backend-WebRTC
 npm start
 ```
 ## Step 4: Start the Frontend UI Server
+
+1. Enable unsecure section in `.env`at `/UI-WebRTC/.env`. Uncomment the lines for unsecure section, and comment the secure section.
+
+```bash
+REACT_APP_HOST="http://localhost:5000"
+REACT_APP_HOST_LIVE="http://localhost:5000"
+REACT_APP_IS_SECURE="false"
+```
+
+2. Run the Frontend UI Server
+
 ```bash
 # Navigate to your UI-WebRTC directory
 cd /UI-WebRTC
 npm start
 ```
-Once started, the UI will load in the browser.
+
+  Once started, the UI will load in the browser.
 ## Step 5: Start an OpenSpace Instance via the UI (Recommended)
 
 1. Open the browser on the same machine
