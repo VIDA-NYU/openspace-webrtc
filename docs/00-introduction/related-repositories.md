@@ -10,7 +10,9 @@ For implementation, the following repositories are relevant:
 
 ## Backend Repositories
 
-### [OpenSpace-Web-Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend)
+### [OpenSpace-Web-Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend/tree/aws)
+Use the **aws** branch for deployment.  
+
 - Provides the core backend server and supervisor for managing OpenSpace
   instances.
 - Handles starting, stopping, and monitoring OpenSpace sessions.
@@ -18,6 +20,8 @@ For implementation, the following repositories are relevant:
 - Manages multi-instance operations.
 
 ### [Backend-WebRTC](https://github.com/OpenSpace/Backend-WebRTC)
+Use the **master** branch for deployment.  
+
 - Contains the WebRTC signaling server and API backend.
 - Facilitates communication between frontend clients and rendering
   servers.
@@ -27,7 +31,9 @@ For implementation, the following repositories are relevant:
 
 ## Frontend Repository
 
-### [UI-WebRTC](https://github.com/OpenSpace/UI-WebRTC)
+### [UI-WebRTC](https://github.com/OpenSpace/UI-WebRTC/tree/secure)
+Use the **secure** branch for deployment.  
+
 - Implements the browser-based client interface for OpenSpace WebRTC.
 - Receives video streams, displays the OpenSpace GUI, and forwards
   user interactions.

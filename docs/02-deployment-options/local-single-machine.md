@@ -16,9 +16,9 @@ in an AWS EC2 deployment.
 ## Required Repositories
 You must clone and set up the following repositories locally:
 
-- [OpenSpace Web Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend)
+- [OpenSpace Web Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend/tree/aws)
 - [Backend WebRTC Server](https://github.com/OpenSpace/Backend-WebRTC)
-- [UI-WebRTC](https://github.com/OpenSpace/UI-WebRTC)
+- [UI-WebRTC](https://github.com/OpenSpace/UI-WebRTC/tree/secure)
 
 Refer to each repository for detailed build instructions and dependencies.
 

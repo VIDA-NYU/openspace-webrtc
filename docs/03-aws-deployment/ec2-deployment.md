@@ -339,11 +339,11 @@ To see OpenSpace WebRTC in action on an AWS EC2 instance, watch the following de
 ---
 
 ## L. Additional Resources
-- [OpenSpace-Web-Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend)
+- [OpenSpace-Web-Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend/tree/aws)
 
 - [Backend-WebRTC](https://github.com/OpenSpace/Backend-WebRTC)
 
-- [UI-WebRTC](https://github.com/OpenSpace/UI-WebRTC)
+- [UI-WebRTC](https://github.com/OpenSpace/UI-WebRTC/tree/secure)
 
 ---
 
