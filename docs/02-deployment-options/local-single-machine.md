@@ -86,7 +86,7 @@ npm start
 
 2. Navigate to:
 
-    ```bash
+    ```
     http://localhost:4690/frontend/
     ```
 

@@ -240,35 +240,9 @@ To set up multiple OpenSpace instances inside the AWS machine, do not forget to:
 > **Explanation:** Multiple instances allow different users or sessions to run independently on the same EC2 machine.
 
 ---
-
 ## J. Running OpenSpace WebRTC
-### 1. Start Supervisor (Web GUI + Signaling Server)
-It will automatically start web-gui on 4690 and signaling server on port 8443
-```bash
-cd /c/webrtc/OpenSpace-Web-Backend
-python supervisor.py
-```
 
-### 2. Start Backend Server
-```bash
-cd /c/webrtc/Backend-WebRTC/
-npm start
-```
-
-### 3. Start Frontend UI Server
-```bash
-cd /c/webrtc/UI-WebRTC/
-npm start
-```
-
-**Start Instance via UI:** Click Join Instance button in the browser.
-
-> **Explanation:** Supervisor orchestrates all services; backend handles signaling and data, frontend provides the user interface.
-
----
-
-## K. Secure vs. Non-Secure Mode
-### Secure Mode (EC2 Access)
+### 1. Secure Mode (EC2 Access)
 
 1. Update API in `api.js`:
 
@@ -283,13 +257,30 @@ npm start
       > Caddy must be installed on the Windows machine **before** running the commands below.  
       > After installing Caddy, copy the `Caddyfile` from  `\webrtc\OpenSpace-Web-Backend\secure_deployment\Caddyfile` to `C:\Caddy\`.
 
-         cd /c/webrtc/OpenSpace-Web-Backend/secure_deployment/
-         python proxy.py
+            cd /c/webrtc/OpenSpace-Web-Backend/secure_deployment/
+            python proxy.py
 
-         cd /c/Caddy/
-         ./caddy_windows_amd64.exe run
+            cd /c/Caddy/
+            ./caddy_windows_amd64.exe run
 
-4. Use the UI interface (https://openspaceweb.com) to start the OpenSpace instance by clicking the Join button.
+4. Start Supervisor (Web GUI + Signaling Server)
+It will automatically start web-gui on 4690 and signaling server on port 8443
+
+            cd /c/webrtc/OpenSpace-Web-Backend
+            python supervisor.py
+
+5. Start Backend Server
+
+            cd /c/webrtc/Backend-WebRTC/
+            npm start
+
+
+6. Build Frontend UI Server
+
+            cd /c/webrtc/UI-WebRTC/
+            npm run build
+
+7. Use the UI interface (https://openspaceweb.com) to start the OpenSpace instance by clicking the Join button.
 
       - Access the secure instance at `https://openspaceweb.com/frontend/#/streaming?id=0` from any machine or network.
       - *Just to test locally without using the interface, you can simply: Run `cd /c/webrtc/OpenSpace-Web-Backend/ && python start.py` to start the OpenSpace instance.*
@@ -303,7 +294,7 @@ npm start
 > After updating your domain, make sure to also update the corresponding `Environment.js` configuration in the Frontend repository.  
 > For reference, see how this was done in this commit: [update domain in Environment.js](https://github.com/OpenSpace/OpenSpace-WebGuiFrontend/commit/ddde0bc2bc8a05e50500c7f873926399f3d06988)
 
-### Non-Secure Mode (Local / Testing)
+### 2. Non-Secure Mode (Local / Testing)
 
 1. Update API in `api.js`:
 
@@ -324,10 +315,9 @@ npm start
 
       - Other machines: add IP to `chrome://flags`
 
-- More info → See [`local-single-machine.md`](local-single-machine.md)
+- More info → See [`local-single-machine.md`](../02-deployment-options/local-single-machine.md)
 
 ---
-
 ## Demo Video
 
 To see OpenSpace WebRTC in action on an AWS EC2 instance, watch the following demo videos:
