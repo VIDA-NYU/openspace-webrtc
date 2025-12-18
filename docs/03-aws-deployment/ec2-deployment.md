@@ -351,8 +351,13 @@ To see OpenSpace WebRTC in action on an AWS EC2 instance, watch the following de
 
 - **Non-secure connection** (inside the same machine, same network):  
   This demo shows the OpenSpace instance running on the EC2 Windows server and accessed locally within the same network.  
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/lCfv9l-rLxg?start=126&end=304" title="Non-secure OpenSpace WebRTC demo" frameborder="0" allowfullscreen></iframe>
-   <!-- [![Non-secure OpenSpace WebRTC demo](https://img.youtube.com/vi/lCfv9l-rLxg/1.jpg)](https://www.youtube.com/watch?v=lCfv9l-rLxg&start=0&end=304) -->
+
+      *Non-secure OpenSpace WebRTC deployment from scratch on AWS EC2:*
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/fDltJbRgr7A" title="Non-secure OpenSpace WebRTC demo on AWS EC2" frameborder="0" allowfullscreen></iframe>
+
+      *Non-secure OpenSpace WebRTC demo:*
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lCfv9l-rLxg?start=126&end=304" title="Non-secure OpenSpace WebRTC demo" frameborder="0" allowfullscreen></iframe>
+      <!-- [![Non-secure OpenSpace WebRTC demo](https://img.youtube.com/vi/lCfv9l-rLxg/1.jpg)](https://www.youtube.com/watch?v=lCfv9l-rLxg&start=0&end=304) -->
 
 - **Secure connection** (Rendering server running on AWS instance, client accessing from outside the network):  
   This demo shows a secure deployment where the OpenSpace instance is hosted on EC2 and accessed remotely from a different network using HTTPS.  
@@ -362,7 +367,7 @@ To see OpenSpace WebRTC in action on an AWS EC2 instance, watch the following de
 
 ---
 
-## L. Additional Resources
+## Additional Resources
 - [OpenSpace-Web-Backend](https://github.com/OpenSpace/OpenSpace-Web-Backend/tree/aws)
 
 - [Backend-WebRTC](https://github.com/OpenSpace/Backend-WebRTC)
