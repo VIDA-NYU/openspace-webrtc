@@ -233,7 +233,7 @@ To make your application accessible from outside the AWS EC2 instance, you need 
 OpenSpace WebRTC uses an **EBS volume** attached to the EC2 instance to store
 binaries, assets, datasets, and runtime files.
 
-### Volume Used
+#### Volume Used
 
 - **Size:** 100 GiB
 - **Volume Type:** gp3
@@ -247,7 +247,7 @@ binaries, assets, datasets, and runtime files.
 
 The volume is created from a snapshot and attached automatically at launch.
 
-### Notes
+#### Notes
 
 - Data persists across instance restarts
 - Increase volume size if installing large datasets
